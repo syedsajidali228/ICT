@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syed Sajid Ali |AI Student</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <!-- top bar, css keeps it stuck at the top while scrolling, and the sun button switches between dark and light theme using javascript -->
+  <header>
+    <nav class="wrap">
+      <a class="logo" href="#top">SA<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="themeBtn" class="theme-btn" title="Change theme">☼</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- hero is the first screen, it shows my name, current degree, a short factual summary, and a decorative card with my basic profile details -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span>FAST-NUCES · KARACHI · AI STUDENT</div>
+        <h1>Syed Sajid Ali.<br><span>AI undergraduate.</span></h1>
+        <p class="hero-text">
+          Undergraduate Artificial Intelligence student at FAST-NUCES Karachi.
+          Coursework and personal projects cover programming fundamentals,
+          language model experimentation, and small software builds.
+        </p>
+        <div class="hero-buttons">
+          <a class="button" href="#work">View projects <span>↗</span></a>
+          <a class="text-link" href="#contact">Contact details</a>
+        </div>
+        <div class="quick-info">
+          <span>Karachi, Pakistan</span>
+          <span>BS AI · 2026–2030</span>
+          <span>Open to internships</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-grid"></div>
+        <div class="avatar">SA</div>
+        <div class="hero-card-top"><span>PROFILE</span><span>2026</span></div>
+        <div class="hero-card-bottom"><strong>Artificial Intelligence</strong><span>Undergraduate</span></div>
+      </div>
+    </section>
+
+    <!-- about section with a short factual profile on the left and my areas of interest listed as small tags on the right -->
+    <section id="about" class="section wrap">
+      <div class="section-head">
+        <span>01 / ABOUT</span>
+        <h2>Profile and <em>interests.</em></h2>
+      </div>
+      <div class="about-grid">
+        <p class="big-text">
+          Undergraduate AI student with an interest in programming,
+          language models, and small experimental projects. Currently
+          working through coursework and self-directed learning in these areas.
+        </p>
+        <div class="about-side">
+          <p>
+            Studying BS Artificial Intelligence at FAST-NUCES Karachi (2026–2030).
+            Previous education in science at Adamjee Government Science College
+            and Usman Public School System.
+          </p>
+          <div class="chips">
+            <span>AI</span><span>Programming</span><span>LLMs</span>
+            <span>Research</span><span>Problem Solving</span><span>AGI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- education section, listed newest first with dates, each entry uses the skill-card style so it matches the rest of the site without adding new css -->
+    <section id="education" class="section wrap">
+      <div class="section-head">
+        <span>02 / EDUCATION</span>
+        <h2>Academic <em>background.</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <small>2026 - 2030</small>
+          <h3>BS Artificial Intelligence</h3>
+          <p>FAST-NUCES Karachi · Undergraduate (in progress)</p>
+        </div>
+        <div class="skill-card">
+          <small>2024 - 2026</small>
+          <h3>Adamjee Government Science College</h3>
+          <p>Science General</p>
+        </div>
+        <div class="skill-card">
+          <small>2021 -- 2024</small>
+          <h3>Usman Public School System</h3>
+          <p>Biology /Medical</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- work section lists projects and experiments, the four filter buttons call showCat() in javascript to hide any card that does not match the chosen category -->
+    <section id="work" class="section wrap">
+      <div class="section-head work-head">
+        <div>
+          <span>03 / SELECTED WORK</span>
+          <h2>Projects and <em>experiments.</em></h2>
+        </div>
+        <div class="filters">
+          <button class="active" onclick="showCat('all', this)">All</button>
+          <button onclick="showCat('ai', this)">AI</button>
+          <button onclick="showCat('builds', this)">Builds</button>
+          <button onclick="showCat('concepts', this)">Concepts</button>
+        </div>
+      </div>
+
+      <div class="projects">
+
+        <article class="project ai">
+          <div class="project-top"><span>AI / 01</span><span>EXPERIMENT</span></div>
+          <h3>Local LLM Experiments</h3>
+          <p>Tests with llama.cpp and local language models to see how an application, an inference runtime and a model fit together.</p>
+          <details><summary>View details</summary><p>llama.cpp · local inference · application/model workflow</p></details>
+        </article>
+
+        <article class="project ai">
+          <div class="project-top"><span>AI / 02</span><span>RESEARCH</span></div>
+          <h3>Reasoning Dataset</h3>
+          <p>A dataset of reasoning examples built from teacher-model outputs, used to test whether smaller models answer in a more structured way.</p>
+          <details><summary>View details</summary><p>Reasoning examples · teacher outputs · exploratory testing</p></details>
+        </article>
+
+        <article class="project ai">
+          <div class="project-top"><span>AI / 03</span><span>EXPERIMENT</span></div>
+          <h3>Llama Training Experiment</h3>
+          <p>Training runs with Llama 3.2 1B under 4-bit quantization on free Colab hardware, to observe behaviour on limited compute.</p>
+          <details><summary>View details</summary><p>Llama 3.2 1B · 4-bit quantization · Google Colab</p></details>
+        </article>
+
+        <article class="project ai">
+          <div class="project-top"><span>AI / 04</span><span>PROTOTYPE</span></div>
+          <h3>Lightweight Training Engine</h3>
+          <p>A workflow concept for lower-end hardware, training in small steps with checkpoints and resume after interruption.</p>
+          <details><summary>View details</summary><p>Checkpoints · resume flow · distillation experiments</p></details>
+        </article>
+
+        <article class="project ai">
+          <div class="project-top"><span>AI / 05</span><span>ARCHITECTURE</span></div>
+          <h3>Mixture of Experts</h3>
+          <p>A small MoE setup with three expert paths and simple routing, to study specialisation inside a compact model.</p>
+          <details><summary>View details</summary><p>Three experts · routing · specialization</p></details>
+        </article>
+
+        <article class="project builds feature">
+          <div class="project-top"><span>BUILD / 06</span><span>ONGOING</span></div>
+          <h3>Khan</h3>
+          <p>A local assistant project built around one loop: Intent → Plan → Execute → Verify.</p>
+          <details><summary>View details</summary><p>Intent planning · execution · verification</p></details>
+        </article>
+
+        <article class="project builds">
+          <div class="project-top"><span>BUILD / 07</span><span>C PROJECT</span></div>
+          <h3>Life RPG</h3>
+          <p>A C console application that records tasks, habits and a diary, with XP, levels, stats and budget tracking.</p>
+          <details><summary>View details</summary><p>Tasks · diary · XP · levels · stats · budget tracking</p></details>
+        </article>
+
+        <article class="project concepts">
+          <div class="project-top"><span>IDEA / 08</span><span>CONCEPT</span></div>
+          <h3>LinkVault</h3>
+          <p>A concept for saving useful links with titles, categories and notes, so saved resources are easier to find later.</p>
+          <details><summary>View details</summary><p>Organization · search · workflow context</p></details>
+        </article>
+
+        <article class="project concepts">
+          <div class="project-top"><span>IDEA / 09</span><span>CONCEPT</span></div>
+          <h3>Personal Productivity System</h3>
+          <p>A concept combining tasks, reminders and completion history to track progress in one place.</p>
+          <details><summary>View details</summary><p>Reminders · completion history · progress tracking</p></details>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- skills section, three short lists grouped by programming, ai and professional, no javascript needed here -->
+    <section id="skills" class="section wrap">
+      <div class="section-head">
+        <span>04 / SKILLS</span>
+        <h2>Technical and professional <em>skills.</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <small>01</small>
+          <h3>Programming</h3>
+          <p>C · HTML · CSS · JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <small>02</small>
+          <h3>AI & Technical</h3>
+          <p>LLM experimentation · datasets · model experiments · research reading</p>
+        </div>
+        <div class="skill-card">
+          <small>03</small>
+          <h3>Professional</h3>
+          <p>Problem solving · GitHub · teamwork · communication</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section with email, location and github, mailto opens the email app and the copy button calls copyEmail() in javascript -->
+    <section id="contact" class="contact wrap">
+      <div>
+        <span>05 / CONTACT</span>
+        <h2>Contact <em>details.</em></h2>
+      </div>
+      <div class="contact-right">
+        <a class="email" href="mailto:syedsajidali228@gmail.com">syedsajidali228@gmail.com</a>
+        <p>Karachi, Pakistan</p>
+        <div class="contact-links">
+          <a href="https://github.com/syedsajidali228" target="_blank">GitHub ↗</a>
+          <button id="copyBtn" onclick="copyEmail()">Copy email</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer is a thin strip at the bottom with my name on the left and a back-to-top link on the right -->
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Syed Sajid Ali</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- script is placed at the end so the html above already exists when the javascript starts running -->
+  <script src="script.js"></script>
+</body>
+</html>
